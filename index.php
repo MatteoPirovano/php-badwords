@@ -1,5 +1,6 @@
 <?php
-  $text= "Ehi sai che sei un grandissimo stronzo?!";
+  $badText = $_GET["badText"];
+  $text = "Ehi sai che sei un grandissimo stronzo?!";
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,6 @@
   <h1>Badwords</h1>
   <p><b>Testo:</b> <?php echo $text ?> ;</p>
   <p><b>Lunghezza testo:</b> <?php echo strlen($text); ?> caratteri ;</p>
-  <p><b>Testo censurato:</b> <?php echo str_replace("stronzo", "***", $text) ?> ;</p>
+  <p><b>Testo censurato:</b> <?php echo str_replace($badText, "***", $text) ?> ;</p>
 </body>
 </html>
